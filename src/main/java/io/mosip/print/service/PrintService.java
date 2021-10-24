@@ -1,26 +1,21 @@
 package io.mosip.print.service;
 
-public interface PrintService<T> {
+import io.mosip.print.model.EventModel;
 
+public interface PrintService {
+    
 	/**
-	 * Gets the documents.
-	 *
-	 * @param type
-	 *            the type
-	 * @param idValue
-	 *            the id value
-	 * @param cardType
-	 *            the card type
-	 * @param isPasswordProtected
-	 *            the is password protected
-	 * @return the documents
+	 * Get the card
+	 * 
+	 * 
+	 * @param eventModel
+	 * @return
+	 * @throws Exception
 	 */
-	public T getDocuments(String credentialSubject, String credentialType, String encryptionPin, String requestId,
-			String sign,
-			String cardType, boolean isPasswordProtected);
+	public byte[] generateCard(EventModel eventModel) throws Exception;
 
 	// Map<String, byte[]> getDocuments(String credentialSubject, String sign,
 	// String cardType,
 	// boolean isPasswordProtected);
-
+	
 }
