@@ -1,12 +1,12 @@
 package io.mosip.print.util;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 
-import io.mosip.kernel.core.logger.spi.Logger;
 import io.mosip.kernel.core.websub.spi.PublisherClient;
 import io.mosip.kernel.core.websub.spi.SubscriptionClient;
 import io.mosip.kernel.websub.api.exception.WebSubClientException;
@@ -44,7 +44,7 @@ public class WebSubSubscriptionHelper {
 	/** The Constant ID_REPO_SERVICE_IMPL. */
 	private static final String INITSUBSCRIPTION = "initSubsriptions";
 
-	private static final Logger LOGGER = PrintLogger.getLogger(WebSubSubscriptionHelper.class);
+	private Logger LOGGER = PrintLogger.getLogger(WebSubSubscriptionHelper.class);
 
 	public void initSubsriptions() {
 		LOGGER.info(LoggerFileConstant.SESSIONID.toString(), WEBSUBSUBSCRIPTIONHEPLER, INITSUBSCRIPTION,

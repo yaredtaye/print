@@ -127,7 +127,7 @@ public class JsonUtil {
 
 	/**
 	 * Object mapper read value. This method maps the jsonString to particular type
-	 *
+	 * 
 	 * @param <T>        the generic type
 	 * @param jsonString the json string
 	 * @param clazz      the clazz
