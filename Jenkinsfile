@@ -7,5 +7,17 @@ pipeline {
       }
     }
 
+    stage('Test') {
+      steps {
+        sh 'echo "testing print dervice"'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'echo "Deploy print service"'
+      }
+    }
+
   }
 }
