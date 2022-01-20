@@ -13,9 +13,14 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Deploy to staging') {
       steps {
-        sh 'echo "Deploy print service"'
+        sh 'echo "Deploy print service staging"'
+      }
+    }
+    stage('Deploy to prod') {
+      steps {
+        sh 'echo "Deploy print service to production"'
       }
     }
 
