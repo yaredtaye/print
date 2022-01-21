@@ -35,7 +35,7 @@ ENV artifactory_url_env=${artifactory_url}
 # change volume to whichever storage directory you want to use for this container.
 VOLUME /home/logs /home/Glowroot
 
-COPY ./target/print-1.1.4.jar print.jar
+COPY ./target/print-1.1.5.2.jar print.jar
 
 EXPOSE 8099
 
