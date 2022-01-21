@@ -16,9 +16,14 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage('Maven Deploy'){
+        stage('Build Docker Image'){
             steps{
-               echo " Deploying JAR file "
+               sh "docker build -t fayda/print:1.1.4 ."
+            }
+        }
+        stage('Deploy docker to Staging'){
+            steps{
+               echo " Deploying Docker to staging area "
             }
         }
     }
